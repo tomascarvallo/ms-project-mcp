@@ -1,0 +1,42 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ms-project-mcp"
+version = "0.1.0"
+description = "MCP server for Microsoft Project desktop: let Claude and other AI agents build, edit and analyze schedules (.mpp) via COM."
+readme = "README.md"
+license = "MIT"
+license-files = ["LICENSE"]
+authors = [{ name = "tomascarvallo" }]
+requires-python = ">=3.10"
+dependencies = [
+    "mcp>=2.0",
+    "pywin32>=306; sys_platform == 'win32'",
+]
+keywords = [
+    "mcp", "mcp-server", "model-context-protocol", "microsoft-project", "ms-project", "mpp",
+    "project-management", "scheduling", "gantt", "critical-path", "claude", "ai-agents",
+    "gestion-de-proyectos", "cronograma", "carta-gantt", "programacion-de-obras",
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Environment :: Win32 (MS Windows)",
+    "Intended Audience :: End Users/Desktop",
+    "Operating System :: Microsoft :: Windows",
+    "Programming Language :: Python :: 3",
+    "Topic :: Office/Business :: Scheduling",
+    "Natural Language :: English",
+    "Natural Language :: Spanish",
+]
+
+[project.urls]
+Homepage = "https://github.com/tomascarvallo/ms-project-mcp"
+Issues = "https://github.com/tomascarvallo/ms-project-mcp/issues"
+
+[project.scripts]
+ms-project-mcp = "ms_project_mcp.server:main"
+
+[tool.setuptools]
+packages = ["ms_project_mcp"]

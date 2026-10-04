@@ -1,0 +1,10 @@
+.venv/
+__pycache__/
+*.pyc
+*.egg-info/
+build/
+dist/
+# archivos de proyecto generados al probar / project files generated while testing
+*.mpp
+*.pdf
+*.csv
